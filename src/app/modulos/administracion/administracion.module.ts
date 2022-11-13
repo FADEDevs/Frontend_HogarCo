@@ -22,6 +22,14 @@ import { CrearInmuebleComponent } from './inmuebles/crear-inmueble/crear-inmuebl
 import { EditarInmuebleComponent } from './inmuebles/editar-inmueble/editar-inmueble.component';
 import { BuscarInmuebleComponent } from './inmuebles/buscar-inmueble/buscar-inmueble.component';
 import { EliminarInmuebleComponent } from './inmuebles/eliminar-inmueble/eliminar-inmueble.component';
+import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
+import { EditarUsuarioComponent } from './usuarios/editar-usuario/editar-usuario.component';
+import { EliminarUsuarioComponent } from './usuarios/eliminar-usuario/eliminar-usuario.component';
+import { BuscarUsuarioComponent } from './usuarios/buscar-usuario/buscar-usuario.component';
+import { CrearSolicitudComponent } from './solicitudes/crear-solicitud/crear-solicitud.component';
+import { EditarSolicitudComponent } from './solicitudes/editar-solicitud/editar-solicitud.component';
+import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eliminar-solicitud.component';
+import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-solicitud.component';
 
 
 @NgModule({
@@ -46,7 +54,15 @@ import { EliminarInmuebleComponent } from './inmuebles/eliminar-inmueble/elimina
     CrearInmuebleComponent,
     EditarInmuebleComponent,
     BuscarInmuebleComponent,
-    EliminarInmuebleComponent
+    EliminarInmuebleComponent,
+    CrearUsuarioComponent,
+    EditarUsuarioComponent,
+    EliminarUsuarioComponent,
+    BuscarUsuarioComponent,
+    CrearSolicitudComponent,
+    EditarSolicitudComponent,
+    EliminarSolicitudComponent,
+    BuscarSolicitudComponent
   ],
   imports: [
     CommonModule,

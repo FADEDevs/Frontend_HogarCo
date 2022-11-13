@@ -20,6 +20,14 @@ import { BuscarInmuebleComponent } from './inmuebles/buscar-inmueble/buscar-inmu
 import { CrearInmuebleComponent } from './inmuebles/crear-inmueble/crear-inmueble.component';
 import { EditarInmuebleComponent } from './inmuebles/editar-inmueble/editar-inmueble.component';
 import { EliminarInmuebleComponent } from './inmuebles/eliminar-inmueble/eliminar-inmueble.component';
+import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-solicitud.component';
+import { CrearSolicitudComponent } from './solicitudes/crear-solicitud/crear-solicitud.component';
+import { EditarSolicitudComponent } from './solicitudes/editar-solicitud/editar-solicitud.component';
+import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eliminar-solicitud.component';
+import { BuscarUsuarioComponent } from './usuarios/buscar-usuario/buscar-usuario.component';
+import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
+import { EditarUsuarioComponent } from './usuarios/editar-usuario/editar-usuario.component';
+import { EliminarUsuarioComponent } from './usuarios/eliminar-usuario/eliminar-usuario.component';
 
 const routes: Routes = [
   {
@@ -101,7 +109,39 @@ const routes: Routes = [
   {
     path: 'buscar-inmueble',
     component: BuscarInmuebleComponent
-  }
+  },
+  {
+    path: 'crear-usuario',
+    component: CrearUsuarioComponent
+  },
+  {
+    path: 'editar-usuario',
+    component: EditarUsuarioComponent
+  },
+  {
+    path: 'eliminar-usuario',
+    component: EliminarUsuarioComponent
+  },
+  {
+    path: 'buscar-usuario',
+    component: BuscarUsuarioComponent
+  },
+  {
+    path: 'crear-solicitud',
+    component: CrearSolicitudComponent
+  },
+  {
+    path: 'editar-solicitud',
+    component: EditarSolicitudComponent
+  },
+  {
+    path: 'eliminar-solicitud',
+    component: EliminarSolicitudComponent
+  },
+  {
+    path: 'buscar-solicitud',
+    component: BuscarSolicitudComponent
+  },
 ];
 
 @NgModule({
