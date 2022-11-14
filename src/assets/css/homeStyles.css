@@ -1,0 +1,223 @@
+/* Estilos de los filtros */
+:root{ /* Pseudo clase para crear variables*/
+    --borderFilter: 3px solid #6B728E;
+    --paddingContainer: 100px 0;
+    --colorTitles: #001a49;
+    --sizeTitles: 3rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    /* grid-template-rows: 300px 1fr; */
+    color: white;
+}
+
+.header::before{/*Creamos un subelemento a partir de header*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),url('../img/headerHome.jpg');
+    background-size: cover; /*Para que el backgound se adapte a la pagina*/
+    clip-path: polygon(50% 0%, 82% 12%, 82% 6%, 91% 6%, 91% 15%, 100% 19%, 100% 100%, 0 100%, 0 18%);
+    z-index: -1;/*Enviamos la imagen debajo de todo el contenido*/
+}
+
+/*Estilos del contenido del header*/
+.headerButtons {
+    position: absolute;
+    display: grid;
+    grid-auto-rows: max-content;
+}
+
+.headerContainer button{
+    /* position: absolute;
+    top: 15% !important;
+    left: 91% !important; */
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    width: 100px;
+    background: none; 
+    color: #FFF;
+    padding: 5px ;
+    font-size: 1.5em;
+    border: none;
+}
+.headerContainer button:hover{
+    cursor: pointer;
+    border: none !important; 
+}
+.headerContainer .headerTitle{
+    font-size: var(--sizeTitles);
+}
+.headerContainer{
+    position: relative;
+    display: grid;
+    grid-auto-rows: max-content;/*para que las filas que se generen no sobrepasen el contenedor*/
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+    /* background: #50577A; */
+}
+
+
+.ownContainer{
+    position: relative;
+    width: 90% ; /*Para que no ocupe el 100% del ancho de la página (por ejemplo el navbar)*/
+    max-width: 1200px;
+    margin: 0 auto ; /*Centramos el contenido verticalmente*/
+    overflow: hidden ; /*Todo lo que esté fuera del elemento se esconda*/
+    padding: var(--paddingContainer); /*Para usar la custom propiertie lo hacemos mediante var(nombreVariable)*/    
+}
+.catalogFilters{
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: flex-end;
+    background: rgb(216, 216, 216);
+    padding: 0 15px ;
+    height: 75px;
+}
+
+.filterItem [type="radio"],
+.formFilter [type="radio"]{
+    display: none;
+}
+
+.filterItem label,
+.formFilter label{
+    text-align: center;
+    margin-top: 8px;
+    display: block;
+    padding: 10px;
+    color: white;
+    background: #50577A;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    width: 100px;
+}
+
+.filterItem .left,
+.formFilter .left{
+    border-radius: 20px 0 0 20px;
+}
+.filterItem .right,
+.formFilter .right{
+    border-left:  var(--borderFilter);
+    border-radius: 0 20px 20px 0;
+}
+
+.filterItem [type="radio"]:checked ~  label{
+    width: 100px;
+    border: 2px solid #50577A !important;
+    background: #6B728E;
+    font-weight: 600;
+    --borderFilter: none !important;/*Curtom property not working*/
+}
+.catalogContent{
+    background: #EDEDED;
+}
+.properties{
+    /* max-height: 90vh; */
+    margin: auto;
+    width: 90vw !important;
+    padding: 50px;
+    display: flex !important;
+    align-content: center !important;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex !important;
+    max-height: 325px !important;
+    margin: 30px 10px;
+}
+
+.btn-primary{
+    background: rgb(216, 216, 216) !important;
+    border: 1px solid #50577A !important;
+    color: #50577A !important;
+    width: 100px;
+    height: 40px;
+}
+.btn-primary:hover{
+    background: #50577A !important;
+    color: white !important;
+    border: none !important;
+    width: 100px;
+    height: 40px;
+    font-weight: 500;
+}
+.viewAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(216, 216, 216);
+    height: 75px;
+}
+.btn-viewAll{
+    background: #50577A !important;
+    color: white;
+}
+.btn-viewAll:hover{
+    color: white;
+}
+/* Estilos de formulario contact us */
+.contactUs{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    flex-wrap: wrap;
+    background: #EDEDED;
+    position: relative;
+}
+.contactUs form{
+    max-width: 70vw;
+    margin: 20px auto;
+}
+.contactUs form .botonEnviar{
+    display: flex;
+    justify-content: center;
+}
+form .botonEnviar .btn{
+    background: #50577A !important;
+    color: white !important;
+    border: none !important;
+    width: 100px;
+    height: 40px;
+    font-weight: 500;
+}
+.contactUs .title{
+    font-size: var(--sizeTitles - 5px);
+    text-align: center;
+}
+.contactUs .formFilters{
+    display: flex;
+    justify-content: center;
+}
+
+.formFilters .formFilter [type="radio"]:checked ~  label{
+    width: 100px;
+    border: 2px solid #50577A !important;
+    background: #6B728E;
+    font-weight: 600;
+}
