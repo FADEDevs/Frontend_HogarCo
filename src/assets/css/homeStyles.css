@@ -192,6 +192,7 @@ body{
     position: relative;
 }
 .contactUs form{
+    width: 30vw;
     max-width: 70vw;
     margin: 20px auto;
 }
@@ -200,6 +201,7 @@ body{
     justify-content: center;
 }
 form .botonEnviar .btn{
+    margin: 15px;
     background: #50577A !important;
     color: white !important;
     border: none !important;
