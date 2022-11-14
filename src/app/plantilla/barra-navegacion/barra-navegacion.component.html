@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <!-- Container wrapper -->
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/inicio">
       <img
         src="../../../assets/img/home.png"
         height="30"
@@ -11,33 +11,29 @@
       />
     </a>
     <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
 
     <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#00e1ff;" >Home</a>
+          <a class="nav-link" routerLink="/inicio" style="color:#00e1ff;" >Home</a>
         </li>
       </ul>
       <!-- Left links -->
 
       <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
+        <button type="button" routerLink="/seguridad/login" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
           Login
         </button>
-        <button type="button" class="btn btn-primary me-3" style="color:#000000;">
+      </div>
+      <div class="d-flex align-items-center">
+        <button type="button" routerLink="/administracion/crear-usuario" class="btn btn-primary me-3" style="color:#000000;">
           Registrarse
         </button>        
       </div>
