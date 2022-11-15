@@ -28,16 +28,16 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#00e1ff;" >Home</a>
+          <a class="nav-link" routerLink="" style="color:#00e1ff;" >Home</a>
         </li>
       </ul>
       <!-- Left links -->
 
       <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
+        <button *ngIf="!sesionActiva" routerLink="seguridad/login" type="button" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
           Login
         </button>
-        <button type="button" class="btn btn-primary me-3" style="color:#000000;">
+        <button *ngIf="!sesionActiva"  routerLink="" type="button" class="btn btn-primary me-3" style="color:#000000;">
           Registrarse
         </button>        
       </div>

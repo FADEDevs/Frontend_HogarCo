@@ -1,0 +1,29 @@
+<div class="container" id="FormLogin">
+    <form [formGroup]="formLog" class="card">
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input formControlName="user" type="text" class="form-control" placeholder="Ingrese su usuario" aria-describedby="addon-wrapping">
+            <!-- <div class="errorValidacion">
+                <label *!ngIf="formLog.controls['user'].errors && formLog.controls['user'].dirty">
+                    El usuario suministrado no es válido, debe ingresar con el correo eléctronico.
+                </label> 
+            </div> -->
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">##</span>
+            <input formControlName="password" type="password" class="form-control" placeholder="Ingrese su contraseña"  aria-describedby="addon-wrapping">
+            <!-- <div class="errorValidacion">
+                <label *ngIf="!mostrar">
+                    la contraseña suministrada no es válida.
+                </label> 
+            </div> -->
+        </div>
+        <div id="link">
+            <a routerLink="#">¿Olvido su contraseña?</a>
+        </div>
+        <button (click)="Login()" type="submit" class="btn btn-info boton" name="action">Ingresar</button>
+    </form>
+    <!-- <div class="container">
+        <a class="btn " href="http://">Registrarse</a>
+    </div> -->
+</div>

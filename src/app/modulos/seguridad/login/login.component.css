@@ -1,0 +1,32 @@
+/* Estilos para el formulario */
+.card{
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 1em;
+    /* border-radius: 2px solid; */
+    border-color: darkblue;   
+    width: 550px !important;
+    height: 325px !important;
+}
+.input-group{
+    padding: 1em;
+    padding-top: 1em;
+}
+#link{
+    text-align: right;
+    padding: 1em;
+}
+#link a{
+    /* padding: 1em; */
+}
+.boton{
+    margin: 15px !important;
+    text-align: center;
+    color: aliceblue;
+}
+/* Validaciones */
+.errorValidacion label{
+    color:red;
+    font-weight: bold;
+}

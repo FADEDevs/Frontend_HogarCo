@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./barra-navegacion.component.css']
 })
 export class BarraNavegacionComponent implements OnInit {
+  //Sesión
+  sesionActiva: Boolean = false;
 
   constructor() { }
 
