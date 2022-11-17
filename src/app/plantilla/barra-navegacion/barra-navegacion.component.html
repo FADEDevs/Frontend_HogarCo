@@ -24,13 +24,26 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/inicio" style="color:#00e1ff;" >Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/administracion/buscar-inmueble" style="color:#00e1ff;" >Inmuebles</a>
+        </li>     
       </ul>
       <!-- Left links -->
 
+      <div class="d-flex align-items-center">        
+        <button *ngIf="sesionActiva" type="button" routerLink="seguridad/cambio-contrasena" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
+          Cambiar Contraseña
+        </button>        
+      </div>
       <div class="d-flex align-items-center">
         <button *ngIf="!sesionActiva" type="button" routerLink="/seguridad/login" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
           Login
         </button>
+      </div>
+      <div class="d-flex align-items-center">        
+        <button *ngIf="sesionActiva" type="button" routerLink="/seguridad/login" class="btn btn-link px-3 me-2" style="color:#00e1ff;">
+          Logout
+        </button>        
       </div>
       <div class="d-flex align-items-center">
         <button *ngIf="!sesionActiva" type="button" routerLink="/administracion/crear-usuario" class="btn btn-primary me-3" style="color:#000000;">
