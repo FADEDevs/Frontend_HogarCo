@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CredencialesModel } from 'src/app/modelos/credenciales.model';
-import { ModeloRecoverPass } from 'src/app/modelos/recoverPass.modelo';
+
 
 @Injectable({
   providedIn: 'root'
