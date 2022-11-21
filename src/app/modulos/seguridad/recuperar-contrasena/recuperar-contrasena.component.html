@@ -12,22 +12,22 @@
                 </h1>
                 <p style=" text-align: center;">
                     Introduce la dirección de correo electrónico que usaste para registrarte en <strong>Hogar Colmobia</strong>. 
-                    Te enviaremos un correo electrónico con tu nombre de usuario y nueva contraseña.
+                    Te enviaremos un correo electrónico con tu nueva contraseña.
                 </p>
-                <form method="post" action="#" role="login">
+                <form [formGroup]="fgRecoverPass"  method="post" action="#" >
                  <br>
                  <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping">@</span>
-                        <input  type="text" class="form-control" placeholder="Ingrese su usuario" aria-describedby="addon-wrapping">
+                        <input formControlName="correo" type="text" class="form-control" placeholder="Ingrese su usuario" aria-describedby="addon-wrapping">
                     </div>
 
             <div class="pwstrength_viewport_progress"> <br></div>
        
             <div class="container text-center col-md-6">
-                <button  type="submit" class="btn btn-info boton" name="action">Ingresar</button>
+                <button [disabled]="!fgRecoverPass.valid" (click)="IdentificarUsuario()" type="submit" class="btn btn-info boton" routerLink="/seguridad/login" >Ingresar</button>
             </div>
             <br>
-            </form>
+                </form>
         </div>
         </div>
     </div>

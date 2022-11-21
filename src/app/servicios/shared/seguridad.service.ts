@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CredencialesModel } from 'src/app/modelos/credenciales.model';
+import { ModeloRecoverPass } from 'src/app/modelos/recoverPass.modelo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeguridadService {
+
   //variable para guardar la url
   url:string= "http://localhost:3000";
+
   constructor(
     private http: HttpClient
   ) { }
@@ -18,5 +21,11 @@ export class SeguridadService {
       email: credenciales.email,
       password: credenciales.password
     });
+  }
+
+  
+  recuperar(email: string): Observable<boolean>{    
+    let urlApi = "http://localhost:3000/RecuperarPass";
+    return this.http.post<boolean>(`${urlApi}/${email}`, {correo:email}); 
   }
 }
