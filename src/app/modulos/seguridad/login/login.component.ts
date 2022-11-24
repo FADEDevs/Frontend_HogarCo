@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SeguridadService } from 'src/app/servicios/shared/seguridad.service';
 import { CredencialesModel } from '../../../modelos/credenciales.model';
 
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   mostrar : Boolean = true; //para la alerta
   constructor(
     private formB: FormBuilder,
-    private servicioSeguridad: SeguridadService
+    private servicioSeguridad: SeguridadService,
+    private router : Router
   ) { }
 
   ngOnInit(): void {
@@ -39,9 +41,11 @@ export class LoginComponent implements OnInit {
       let datos = new CredencialesModel();
       datos.email = this.formLog.controls['user'].value;
       datos.password = this.formLog.controls['password'].value;
-      this.servicioSeguridad.Login(datos).subscribe({
-        next:(data:any) => console.log(data),
-        error: (e) => console.log(e)
+      this.servicioSeguridad.Login(datos).subscribe((datos:any) => {
+        this.servicioSeguridad.AlmacenarSesion(datos);
+        this.router.navigate(["/inicio"])
+      }, (error:any) => {
+        alert("datos invalidos")
       });
     }
   }

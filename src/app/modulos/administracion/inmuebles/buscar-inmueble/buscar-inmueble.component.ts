@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloInmueble } from 'src/app/modelos/inmueble.model';
+import { InmuebleService } from 'src/app/servicios/shared/inmueble.service';
 
 @Component({
   selector: 'app-buscar-inmueble',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarInmuebleComponent implements OnInit {
 
-  constructor() { }
+  listadoRegistros: ModeloInmueble[] = [];
+
+  constructor(private  inmuebleServicio: InmuebleService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoInmuebles();
   }
 
+  ObtenerListadoInmuebles(){
+     this.inmuebleServicio.ObtenerRegistros().subscribe((datos: ModeloInmueble[]) => {
+      this.listadoRegistros = datos;
+     })
+  }
 }

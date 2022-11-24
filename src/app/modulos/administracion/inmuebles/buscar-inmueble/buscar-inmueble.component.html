@@ -1,1 +1,34 @@
-<p>buscar-inmueble works!</p>
+<div class="container">
+  
+  
+    <button  type="button" routerLink="/administracion/crear-inmueble" class="btn btn-primary btn-sm">
+      Crear Inmueble
+    </button>
+
+
+  <table class="table table-reponsive">
+    <thead>
+      <tr>
+        <th>nombre</th>
+        <th>precio</th>
+        <th>imagen</th>
+        <th>editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listadoRegistros">
+        <td> <img src="{{p.imagen}}" class="imagen-producto"> </td>
+        <td>{{p.valor}}</td>
+        <td>{{p.departamento}}</td>
+        <td>{{p.ciudad}}</td>
+        <td>{{p.direccion}}</td>
+        <td>{{p.estado}}</td>
+        <td>
+          <a routerLink="/administracion/editar-inmueble/{{p.id}}" class="btn">Editar inmbuele</a>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+</div>

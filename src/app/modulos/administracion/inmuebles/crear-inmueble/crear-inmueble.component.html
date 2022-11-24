@@ -1,1 +1,90 @@
-<p>crear-inmueble works!</p>
+
+<div class="container">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarInmueble()">
+        <br>
+        <h2 class="text-center">Crear Inmueble</h2>
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="imagen" class="control-label"><b>IMAGEN</b></label>
+            <input formControlName="imagen" type="text" class="form-control"  name="imagen" >
+        </div>    
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="valor" class="control-label"><b>VALOR</b></label>
+            <input formControlName="valor" type="text" class="form-control"  name="valor" >
+        </div>        
+        
+        <div class="form-group"> <!-- Full Name -->
+            <label for="departamento" class="control-label"><b>DEPARTAMENTO</b></label>
+            <input formControlName="departamento" type="text" class="form-control"  name="departamento" >
+        </div>  
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="ciudad" class="control-label"><b>CIUDAD</b></label>
+            <input formControlName="ciudad" type="text" class="form-control"  name="ciudad" >
+        </div>   
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="direccion" class="control-label"><b>DIRECCION</b></label>
+            <input formControlName="direccion" type="text" class="form-control"  name="direccion" >
+        </div>  
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="estado" class="control-label"><b>ESTADO</b></label>
+            <input formControlName="estado" type="text" class="form-control"  name="estado" >
+        </div>  
+
+        <br>
+        <div class="form-group container text-center col-md-6"> <!-- Submit Button -->
+            <button [disabled]="!fgValidador.valid" type="submit" class="btn btn-primary">CREAR!</button>
+        </div>     
+        
+    </form>
+
+    <br>
+
+</div>
+
+<!-- <div class="row container">
+    <h3 class="center align">Crear Inmueble</h3>
+    <article class="col s6 offset.s3">
+        <form method="post" action="formulario-contacto.php">
+            <div class="input-field">
+                <label for="imagen">imagen</label>
+                <input type="text" name="imagen" required>
+            </div>
+
+            <div class="input-field">
+                <label for="valor">valor</label>
+                <input type="text" name="valor" required>
+            </div>
+
+            <div class="input-field">
+                <label for="departamento">departamento</label>
+                <input type="text" name="departamento" required>
+            </div>
+
+            <div class="input-field">
+                <label for="ciudad">ciudad</label>
+                <input type="text" name="ciudad" required>
+            </div>
+
+            <div class="input-field">
+                <label for="direccion">direccion</label>
+                <input type="text" name="direccion" required>
+            </div>
+
+            <div class="input-field">
+                <label for="estado">estado</label>
+                <input type="text" name="estado" required>
+            </div>
+                
+            <p class="center-align">
+                <button class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">send</i>enviar
+                </button>
+            </p>
+            
+        </form>
+    </article>
+</div> -->

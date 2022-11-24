@@ -30,6 +30,7 @@ import { CrearSolicitudComponent } from './solicitudes/crear-solicitud/crear-sol
 import { EditarSolicitudComponent } from './solicitudes/editar-solicitud/editar-solicitud.component';
 import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eliminar-solicitud.component';
 import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-solicitud.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -66,7 +67,9 @@ import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

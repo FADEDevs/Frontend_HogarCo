@@ -6,13 +6,15 @@ import { LoginComponent } from './login/login.component';
 import { CambioContrasenaComponent } from './cambio-contrasena/cambio-contrasena.component';
 import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-contrasena.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     CambioContrasenaComponent,
-    RecuperarContrasenaComponent
+    RecuperarContrasenaComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,
