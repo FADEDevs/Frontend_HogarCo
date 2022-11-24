@@ -1,72 +1,94 @@
-<form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-6"><!--columna de 4 con maximo 12 de espacio-->
-      <label for="txtNombres" class="form-label">Nombres</label>
-      <input type="text" class="form-control" id="txtNombres" required>
-      <div class="invalid-feedback">
-        Este campo es requerido
-      </div>
-    </div>
 
-    <div class="col-md-6">
-      <label for="txtApellidos" class="form-label">Apellidos</label>
-      <input type="text" class="form-control" id="txtApellidos" required>
-      <div class="invalid-feedback">
-        Los apellidos son obligatorios
-      </div>
-    </div>
 
-    <div class="col-md-8">
-        <label for="txtNumeroDocumento" class="form-label">Numero de Documento</label>
-        <input type="text" class="form-control" id="txtNumeroDocumento" required>
-        <div class="invalid-feedback">
-          Los apellidos son obligatorios
+<body>
+  <div class="container">
+
+
+        <!--agregando el fieldset-->
+    <fieldset>
+        <legend>Ingresar un nuevo usuario</legend>
+        <br>
+        <br>
+
+        <div>
+            Bienvenido a hogar colombia, tu aplicación inmobiliaria en la que podras encontrar tu casa ideal desde tu navegador. Por favor ingresa tus datos:
+
         </div>
-      </div>
+            <br>
+            <br>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6"><!--columna de 4 con maximo 12 de espacio-->
+                    <label for="txtNombres" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" id="txtNombres" required>
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+            </div>
 
-    <div class="col-md-8">
-      <label for="txtCorreo"  class="form-label">Correo electronico</label>
-      <div class="input-group has-validation">
-        <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Ingrese un correo electronico
-        </div>
-      </div>
-    </div>
+            <div class="col-md-6">
+                    <label for="txtApellidos" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="txtApellidos" required>
+                <div class="invalid-feedback">
+                    Los apellidos son obligatorios
+                </div>
+            </div>
 
-    <div class="col-md-8">
-      <label for="txtCelular" class="form-label">Celular</label>
-      <input type="text" class="form-control" id="txtCelular" required>
-      <div class="invalid-feedback">
-        Ingrese un numero de celular.
-      </div>
-    </div>
+            <div class="col-md-8">
+                    <label for="txtNumeroDocumento" class="form-label">Numero de Documento</label>
+                    <input type="text" class="form-control" id="txtNumeroDocumento" required>
+                <div class="invalid-feedback">
+                    Los apellidos son obligatorios
+                </div>
+            </div>
 
-    <div class="col-md-8">
-        <label for="txtContraseña" class="form-label">Celular</label>
-        <input type="text" class="form-control" id="txtContraseña" required>
-        <div class="invalid-feedback">
-          Ingrese un numero de celular.
-        </div>
-      </div>
+            <div class="col-md-8">
+                    <label for="txtCorreo"  class="form-label">Correo electronico</label>
+                <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Ingrese un correo electronico
+                    </div>
+                </div>
+            </div>
 
-    <div class="col-md-6">
-        <label for="selecRol" class="form-label">Rol</label>
-        <select name="roles" class="form-control" id="selecRol" required>
-            <option value="" selected>--Seleccionar rol--</option>
-            <option value="">Asesor</option>
-            <option value="">Cliente</option>
-            <option value="">Administrador</option>
-            <option value="">Configurador</option>
-        </select>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
+            <div class="col-md-8">
+                    <label for="txtCelular" class="form-label">Celular</label>
+                    <input type="text" class="form-control" id="txtCelular" required>
+                <div class="invalid-feedback">
+                    Ingrese un numero de celular.
+                </div>
+            </div>
 
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Registrarse</button>
-    </div>
-</form>
+            <div class="col-md-8">
+                    <label for="txtContraseña" class="form-label">Contraseña</label>
+                    <input type="text" class="form-control" id="txtContraseña" required>
+                <div class="invalid-feedback">
+                    Ingrese un numero de celular.
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                    <label for="selecRol" class="form-label">Rol</label>
+                <select name="roles" class="form-control" id="selecRol" required>
+                    <option value="" selected>--Seleccionar rol--</option>
+                    <option value="">Asesor</option>
+                    <option value="">Cliente</option>
+                    <option value="">Administrador</option>
+                    <option value="">Configurador</option>
+                </select>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Registrarse</button>
+            </div>
+        </form>
+        
+   
+    </fieldset>
+  </div>
