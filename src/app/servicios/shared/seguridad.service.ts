@@ -71,6 +71,16 @@ export class SeguridadService {
   ObtenerDatosUsuarioEnSesion(){
     return this.datosUsuarioEnSesion.asObservable();
   }
+
+  ObtenerToken(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString);  
+      return datos.tk;    
+    }else{
+      return '';
+    }
+  }
   
   recuperar(email: string): Observable<boolean>{    
     let urlApi = "http://localhost:3000/RecuperarPass";

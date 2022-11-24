@@ -29,7 +29,7 @@ export class CrearInmuebleComponent implements OnInit {
   }
 
   GuardarInmueble(){
-    let valor = this.fgValidador.controls["valor"].value;
+    let valor = parseInt(this.fgValidador.controls["valor"].value);
     let departamento = this.fgValidador.controls["departamento"].value;
     let ciudad = this.fgValidador.controls["ciudad"].value;
     let direccion = this.fgValidador.controls["direccion"].value;
@@ -42,9 +42,14 @@ export class CrearInmuebleComponent implements OnInit {
     p.direccion = direccion;
     p.estado = estado;
     p.imagen = imagen
+    p.inmobiliariaId= "string";
+    p.asesorId= "string";
+    p.tipoInmueble= "string";
+    p.tipoOferta= "string";
+    p.urlVideo= "string";
     this.servicioInmueble.CrearInmueble(p).subscribe((datos: ModeloInmueble) =>{
       alert("Producto almacenado correctamente");
-      this.router.navigate(["/administracion/buscar-productos"]);
+      this.router.navigate(["/administracion/buscar-inmueble"]);
     },(error: any) =>
     alert("error almacenando el ´producto")
     )

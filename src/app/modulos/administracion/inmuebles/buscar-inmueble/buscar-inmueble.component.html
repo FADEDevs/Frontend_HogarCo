@@ -9,14 +9,16 @@
   <table class="table table-reponsive">
     <thead>
       <tr>
-        <th>nombre</th>
-        <th>precio</th>
-        <th>imagen</th>
-        <th>editar</th>
+        <th>IMAGEN</th>
+        <th>VALOR</th>
+        <th>DEPARTAMENTO</th>
+        <th>CIUDAD</th>
+        <th>DIRECCION</th>
+        <th>ESTADO</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let p of listadoRegistros">
+      <tr *ngFor="let p of listadoRegistros" >
         <td> <img src="{{p.imagen}}" class="imagen-producto"> </td>
         <td>{{p.valor}}</td>
         <td>{{p.departamento}}</td>
