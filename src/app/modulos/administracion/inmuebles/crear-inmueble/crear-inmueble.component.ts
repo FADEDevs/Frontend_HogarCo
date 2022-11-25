@@ -51,7 +51,7 @@ export class CrearInmuebleComponent implements OnInit {
       alert("Producto almacenado correctamente");
       this.router.navigate(["/administracion/buscar-inmueble"]);
     },(error: any) =>
-    alert("error almacenando el ´producto")
+    alert("error almacenando el producto")
     )
 
   }
