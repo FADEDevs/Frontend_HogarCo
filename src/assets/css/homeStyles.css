@@ -12,6 +12,7 @@
 }
 body{
     font-family: "Poppins", sans-serif;
+    background: #bdc5cf;
 }
 
 .header{
@@ -54,7 +55,7 @@ body{
     display: flex;
     justify-self: center;
     width: 100px;
-    background: none; 
+    background: none;
     color: #FFF;
     padding: 5px ;
     font-size: 1.5em;
@@ -62,7 +63,7 @@ body{
 }
 .headerContainer button:hover{
     cursor: pointer;
-    border: none !important; 
+    border: none !important;
 }
 .headerContainer .headerTitle{
     font-size: var(--sizeTitles);
@@ -85,7 +86,7 @@ body{
     max-width: 1200px;
     margin: 0 auto ; /*Centramos el contenido verticalmente*/
     overflow: hidden ; /*Todo lo que esté fuera del elemento se esconda*/
-    padding: var(--paddingContainer); /*Para usar la custom propiertie lo hacemos mediante var(nombreVariable)*/    
+    padding: var(--paddingContainer); /*Para usar la custom propiertie lo hacemos mediante var(nombreVariable)*/
 }
 .catalogFilters{
     display: flex;
@@ -134,23 +135,22 @@ body{
     --borderFilter: none !important;/*Curtom property not working*/
 }
 .catalogContent{
-    background: #EDEDED;
-}
-.properties{
-    /* max-height: 90vh; */
-    margin: auto;
-    width: 90vw !important;
-    padding: 50px;
-    display: flex !important;
-    align-content: center !important;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  background: #EDEDED;
 }
 
+.catalogo{
+  display: flex;
+  padding: 10px;
+  margin: auto !important;
+  max-width: 90vw !important;
+  /* background-color: #50577A; */
+}
 .card{
     display: flex !important;
     max-height: 325px !important;
-    margin: 30px 10px;
+    margin: 20px 0;
 }
 
 .btn-primary{

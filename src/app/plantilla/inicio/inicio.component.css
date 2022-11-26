@@ -1,0 +1,12 @@
+.card-img-top{
+  min-width: 180px;
+  max-height: 180px;
+}
+
+.catalogo{
+  display: flex;
+  align-self: center !important;
+  justify-self: center !important;
+  align-items: center !important;
+  align-content: center !important;
+}

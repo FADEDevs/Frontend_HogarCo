@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{inmueble.imagen}}" alt="{{inmueble.tipoInmueble}} en {{inmueble.ciudad}}">
+  <div class="card-body">
+      <h5 class="card-title">{{inmueble.valor | currency: "COP":'symbol':'3.0'}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> {{inmueble.ciudad}}</h6>
+      <a href="#" class="btn btn-primary">Ver más</a>
+  </div>
+</div>

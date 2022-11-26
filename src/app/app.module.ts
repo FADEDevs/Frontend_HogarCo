@@ -8,6 +8,8 @@ import { PiePaginaComponent } from './plantilla/pie-pagina/pie-pagina.component'
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CardInmuebleComponent } from './plantilla/inicio/card/card-inmueble/card-inmueble.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import {HttpClientModule} from '@angular/common/http';
     BarraNavegacionComponent,
     PiePaginaComponent,
     InicioComponent,
-    ErrorComponent
+    ErrorComponent,
+    CardInmuebleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

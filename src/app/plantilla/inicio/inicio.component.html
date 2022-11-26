@@ -7,13 +7,13 @@
     <title>Hogar Colombia</title>
     <script src="https://kit.fontawesome.com/611dfec7f1.js" crossorigin="anonymous"></script><!-- Para hacer uso de los iconos de Fontawesome -->
     <link rel="shortcut icon" href="img/HogarColombia.ico"><!-- Favicon de HogarColombia -->
-    
+
     <!-- Estilos de bootstrap -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 </head>
 <body>
     <header class="header">
-        <section class="headerContainer ownContainer" 
+        <section class="headerContainer ownContainer"
         style="background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),url('../../../assets/img/headerHome.jpg');
                 background-size: cover;
                 clip-path: polygon(50% 0%, 82% 12%, 82% 6%, 91% 6%, 91% 15%, 100% 19%, 100% 100%, 0 100%, 0 18%);
@@ -41,76 +41,18 @@
                 </div>
             </div>
             <div class="catalogContent">
-                <div class="properties">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
+                <div class="catalogo" fxFlex fxLayout="column">
+                  <div fxLayout="row wrap">
+                    <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"
+                      *ngFor="let inmueble of allInmuebles | async">
+                          <app-card-inmueble [inmueble]="inmueble"></app-card-inmueble>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../../../assets/img/casaCatalogo1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">$180.000.000</h5>
-                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i> Bogotá D.C</h6>
-                          <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="viewAll">
-                    <a href="#" class="btn btn-viewAll btn-lg"><i class="fa-sharp fa-solid fa-arrow-down"></i> Ver todas las ofertas</a>
+                  </div>
                 </div>
             </div>
+            <div class="viewAll">
+              <a href="#" class="btn btn-viewAll btn-lg"><i class="fa-sharp fa-solid fa-arrow-down"></i> Ver todas las ofertas</a>
+          </div>
         </section>
         <section class="contactUs">
             <h1 class="title">Contáctanos</h1>
