@@ -1,9 +1,6 @@
-<div class="container">
-  
-  
-    <button  type="button" routerLink="/administracion/crear-inmueble" class="btn btn-primary btn-sm">
-      Crear Inmueble
-    </button>
+<div class="container">        
+
+  <a routerLink="/administracion/crear-inmueble" class="btn btn-info">Crear inmueble</a>
 
 
   <table class="table table-reponsive">
@@ -26,9 +23,11 @@
         <td>{{p.direccion}}</td>
         <td>{{p.estado}}</td>
         <td>
-          <a routerLink="/administracion/editar-inmueble/{{p.id}}" class="btn">Editar inmbuele</a>
+          <a routerLink="/administracion/editar-inmueble/{{p.id}}" class="btn btn-warning">Editar inmueble</a>
         </td>
-        
+        <td>
+          <a routerLink="/administracion/eliminar-inmueble/{{p.id}}" class="btn btn-danger">Eliminar inmueble</a>
+        </td>
       </tr>
     </tbody>
   </table>

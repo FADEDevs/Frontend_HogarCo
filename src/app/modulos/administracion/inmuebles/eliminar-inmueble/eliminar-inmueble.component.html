@@ -1,1 +1,16 @@
-<p>eliminar-inmueble works!</p>
+<div class="container">
+    <div class="">
+    <h2 class="text-center">Esta usted seguro que desea eliminar el inmueble:</h2>
+    <br>
+    <div class="container text-center col-md-6">
+    <img src="{{inmueble.imagen}}" class="imagen-producto">
+    </div>
+    <p class="text-center">Valor de: <b>{{inmueble.valor}}</b></p>
+    <br>
+    <div class="container text-center col-md-6">
+    <button (click)="Eliminar()" class="btn btn-danger center"> Si</button>&NonBreakingSpace;
+    <button class="btn btn-success center"> No</button>
+    </div>
+    <br>
+    </div>
+</div>

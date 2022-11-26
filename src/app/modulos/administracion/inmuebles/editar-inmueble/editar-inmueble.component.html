@@ -1,1 +1,46 @@
-<p>editar-inmueble works!</p>
+<div class="container">
+    <form [formGroup]="fgValidador" (ngSubmit)="EditarInmueble()">
+        <input type="hidden" formControlName="id">
+        <br>
+        <h2 class="text-center">Editar Inmueble</h2>
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="imagen" class="control-label"><b>IMAGEN</b></label>
+            <input formControlName="imagen" type="text" class="form-control"  name="imagen" >
+        </div>    
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="valor" class="control-label"><b>VALOR</b></label>
+            <input formControlName="valor" type="text" class="form-control"  name="valor" >
+        </div>        
+        
+        <div class="form-group"> <!-- Full Name -->
+            <label for="departamento" class="control-label"><b>DEPARTAMENTO</b></label>
+            <input formControlName="departamento" type="text" class="form-control"  name="departamento" >
+        </div>  
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="ciudad" class="control-label"><b>CIUDAD</b></label>
+            <input formControlName="ciudad" type="text" class="form-control"  name="ciudad" >
+        </div>   
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="direccion" class="control-label"><b>DIRECCION</b></label>
+            <input formControlName="direccion" type="text" class="form-control"  name="direccion" >
+        </div>  
+
+        <div class="form-group"> <!-- Full Name -->
+            <label for="estado" class="control-label"><b>ESTADO</b></label>
+            <input formControlName="estado" type="text" class="form-control"  name="estado" >
+        </div>  
+
+        <br>
+        <div class="form-group container text-center col-md-6"> <!-- Submit Button -->
+            <button [disabled]="!fgValidador.valid" type="submit" class="btn btn-success">EDITAR!</button>
+        </div>     
+        
+    </form>
+
+    <br>
+
+</div>

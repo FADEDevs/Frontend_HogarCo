@@ -103,7 +103,7 @@ const routes: Routes = [
     component: EditarInmuebleComponent
   },
   {
-    path: 'eliminar-inmueble',
+    path: 'eliminar-inmueble/:id',
     component: EliminarInmuebleComponent
   },
   {

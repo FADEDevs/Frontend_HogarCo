@@ -20,16 +20,20 @@ token: String = '';
     return this.http.get<ModeloInmueble[]>(`${this.url}/inmuebles`)
   }
 
-  CrearInmueble(producto: ModeloInmueble):Observable<ModeloInmueble>{
-    return this.http.post<ModeloInmueble>(`${this.url}/inmuebles`,producto,{
+  ObtenerRegistrosPorId(id: string):Observable<ModeloInmueble>{
+    return this.http.get<ModeloInmueble>(`${this.url}/inmuebles/${id}`)
+  }
+
+  CrearInmueble(inmueble: ModeloInmueble):Observable<ModeloInmueble>{
+    return this.http.post<ModeloInmueble>(`${this.url}/inmuebles`,inmueble,{
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
     })
   }
 
-  ActualizarInmueble(producto: ModeloInmueble):Observable<ModeloInmueble>{
-    return this.http.put<ModeloInmueble>(`${this.url}/inmuebles`,producto,{
+  ActualizarInmueble(inmueble: ModeloInmueble):Observable<ModeloInmueble>{
+    return this.http.put<ModeloInmueble>(`${this.url}/inmuebles/${inmueble.id}`,inmueble,{
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
