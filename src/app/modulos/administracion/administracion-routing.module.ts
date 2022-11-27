@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { BuscarAsesorComponent } from './asesores/buscar-asesor/buscar-asesor.component';
 import { CrearAsesorComponent } from './asesores/crear-asesor/crear-asesor.component';
 import { EditarAsesorComponent } from './asesores/editar-asesor/editar-asesor.component';
@@ -32,27 +33,33 @@ import { EliminarUsuarioComponent } from './usuarios/eliminar-usuario/eliminar-u
 const routes: Routes = [
   {
     path: 'crear-asesor',
-    component: CrearAsesorComponent
+    component: CrearAsesorComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-asesor',
-    component: EditarAsesorComponent
+    component: EditarAsesorComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'eliminar-asesor',
-    component: EliminarAsesorComponent
+    component: EliminarAsesorComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-asesor',
-    component: BuscarAsesorComponent
+    component: BuscarAsesorComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-cliente',
-    component: CrearClienteComponent
+    component: CrearClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-cliente',
-    component: EditarClienteComponent
+    component: EditarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'eliminar-cliente',
@@ -96,19 +103,23 @@ const routes: Routes = [
   },
   {
     path: 'crear-inmueble',
-    component: CrearInmuebleComponent
+    component: CrearInmuebleComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-inmueble/:id',
-    component: EditarInmuebleComponent
+    component: EditarInmuebleComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'eliminar-inmueble/:id',
-    component: EliminarInmuebleComponent
+    component: EliminarInmuebleComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-inmueble',
-    component: BuscarInmuebleComponent
+    component: BuscarInmuebleComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-usuario',

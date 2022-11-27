@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { CambioContrasenaComponent } from './cambio-contrasena/cambio-contrasena.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -8,7 +9,8 @@ import { RecuperarContrasenaComponent } from './recuperar-contrasena/recuperar-c
 const routes: Routes = [
   {
     path: 'cambio-contrasena',
-    component: CambioContrasenaComponent
+    component: CambioContrasenaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'login',
@@ -16,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'logout',
-    component: LogoutComponent
+    component: LogoutComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'recuperar-contrasena',
