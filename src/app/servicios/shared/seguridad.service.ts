@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CredencialesModel } from 'src/app/modelos/credenciales.model';
 import { ModeloDatos } from 'src/app/modelos/datos.modelo';
 import { IdentificarModel } from 'src/app/modelos/identificar.model';
+import { CambioContrasenaModel } from 'src/app/modelos/cambio-contrasena.model';
 
 
 @Injectable({
@@ -85,5 +86,13 @@ export class SeguridadService {
   recuperar(email: string): Observable<boolean>{    
     let urlApi = "http://localhost:3000/RecuperarPass";
     return this.http.post<boolean>(`${urlApi}/${email}`, {correo:email}); 
+  }
+
+  CambioContra(datos : CambioContrasenaModel): Observable <Boolean>{
+    return this.http.post<boolean>(`${this.url}/ModificarPass`,{
+      cActual: datos.cActual,
+      cNueva: datos.cNueva,
+      cValidada: datos.cValidada
+    });
   }
 }

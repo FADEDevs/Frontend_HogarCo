@@ -1,1 +1,24 @@
-<p>cambio-contrasena works!</p>
+<div class="container">
+    <form [formGroup]="formContra" action="">
+        <!-- Contraseña Actual -->
+        <div class="form-floating mb-3">
+            <input formControlName="passCurrent" type="password" class="form-control" placeholder="contraseña">
+            <label for="passCurrent">Contraseña Actual</label>
+        </div>
+        <!-- Contraseña Nueva -->
+        <div class="form-floating mb-3">
+            <input formControlName="passNew" type="password" class="form-control" placeholder="contraseña">
+            <label for="passNew">Contraseña Nueva</label>
+        </div>
+        <!-- Contraseña Nueva Validación -->
+        <div class="form-floating mb-3">
+            <input formControlName="passValidate" type="password" class="form-control" placeholder="contraseña">
+            <label for="passValidate">Contraseña Nueva Validación</label>
+        </div>
+
+        <div>
+            <button (click)="CambioContra()" type="submit" class="btn btn-success">Cambiar</button>
+        </div>
+    </form>
+</div>
+
