@@ -5,6 +5,7 @@ export class DatosUserModel{
     apellidos?:string;
     correo?:string;
     celular?:string;
-    rol?:[];
-    contraseña?:string;
+    rol?:string;
+    contrasena?:string;
+    estado?: string;
 }

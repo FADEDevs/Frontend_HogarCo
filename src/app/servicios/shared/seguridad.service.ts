@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CredencialesModel } from 'src/app/modelos/credenciales.model';
 import { ModeloDatos } from 'src/app/modelos/datos.modelo';
 import { IdentificarModel } from 'src/app/modelos/identificar.model';
+import { DatosUserModel } from 'src/app/modelos/datos-user.model';
 
 
 @Injectable({
@@ -85,5 +86,13 @@ export class SeguridadService {
   recuperar(email: string): Observable<boolean>{    
     let urlApi = "http://localhost:3000/RecuperarPass";
     return this.http.post<boolean>(`${urlApi}/${email}`, {correo:email}); 
+  }
+
+  RegistroUsuario(user: DatosUserModel ):Observable<DatosUserModel>{
+    return this.http.post<DatosUserModel>(`${this.url}/Registro`,user,{
+      headers: new HttpHeaders({
+        
+      })
+    })
   }
 }

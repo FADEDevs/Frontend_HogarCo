@@ -16,10 +16,10 @@
         </div>
             <br>
             <br>
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario()">
             <div class="col-md-6"><!--columna de 4 con maximo 12 de espacio-->
                     <label for="txtNombres" class="form-label">Nombres</label>
-                    <input type="text" class="form-control" id="txtNombres" required>
+                    <input formControlName="nombres" type="text" class="form-control"  name="nombres">
                 <div class="invalid-feedback">
                     Este campo es requerido
                 </div>
@@ -27,7 +27,7 @@
 
             <div class="col-md-6">
                     <label for="txtApellidos" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="txtApellidos" required>
+                    <input formControlName="apellidos" type="text" class="form-control"  name="apellidos">
                 <div class="invalid-feedback">
                     Los apellidos son obligatorios
                 </div>
@@ -35,7 +35,7 @@
 
             <div class="col-md-8">
                     <label for="txtNumeroDocumento" class="form-label">Numero de Documento</label>
-                    <input type="text" class="form-control" id="txtNumeroDocumento" required>
+                    <input formControlName="documento" type="text" class="form-control"  name="documento">
                 <div class="invalid-feedback">
                     Los apellidos son obligatorios
                 </div>
@@ -45,7 +45,7 @@
                     <label for="txtCorreo"  class="form-label">Correo electronico</label>
                 <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
+                        <input formControlName="correo" type="text" class="form-control"  name="correo">
                     <div class="invalid-feedback">
                         Ingrese un correo electronico
                     </div>
@@ -54,15 +54,13 @@
 
             <div class="col-md-8">
                     <label for="txtCelular" class="form-label">Celular</label>
-                    <input type="text" class="form-control" id="txtCelular" required>
+                    <input formControlName="celular" type="text" class="form-control"  name="celular">
                 <div class="invalid-feedback">
                     Ingrese un numero de celular.
                 </div>
             </div>
 
-            <div class="col-md-8">
-                    <label for="txtContraseña" class="form-label">Contraseña</label>
-                    <input type="text" class="form-control" id="txtContraseña" required>
+            <div class="col-md-8">                    
                 <div class="invalid-feedback">
                     Ingrese un numero de celular.
                 </div>
@@ -70,12 +68,12 @@
 
             <div class="col-md-6">
                     <label for="selecRol" class="form-label">Rol</label>
-                <select name="roles" class="form-control" id="selecRol" required>
+                <select formControlName="rol" type="text" class="form-control"  name="rol">
                     <option value="" selected>--Seleccionar rol--</option>
-                    <option value="">Asesor</option>
-                    <option value="">Cliente</option>
-                    <option value="">Administrador</option>
-                    <option value="">Configurador</option>
+                    <option value="asesor">Asesor</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="configurador">Configurador</option>
                 </select>
                     <br>
                     <br>
@@ -85,7 +83,7 @@
             </div>
 
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Registrarse</button>
+                <button  type="submit" class="btn btn-success">Registrarse</button>
             </div>
         </form>
         
