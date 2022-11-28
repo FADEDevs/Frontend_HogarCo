@@ -5,6 +5,7 @@ import { CredencialesModel } from 'src/app/modelos/credenciales.model';
 import { ModeloDatos } from 'src/app/modelos/datos.modelo';
 import { IdentificarModel } from 'src/app/modelos/identificar.model';
 import { DatosUserModel } from 'src/app/modelos/datos-user.model';
+import { CambioContrasenaModel } from 'src/app/modelos/cambio-contrasena.model';
 
 
 @Injectable({
@@ -90,9 +91,16 @@ export class SeguridadService {
 
   RegistroUsuario(user: DatosUserModel ):Observable<DatosUserModel>{
     return this.http.post<DatosUserModel>(`${this.url}/Registro`,user,{
-      headers: new HttpHeaders({
-        
-      })
-    })
+      headers: new HttpHeaders({})
+    });
   }
+
+  CambioContra(datos : CambioContrasenaModel): Observable <Boolean>{
+    return this.http.post<boolean>(`${this.url}/ModificarPass`,{
+      cActual: datos.cActual,
+      cNueva: datos.cNueva,
+      cValidada: datos.cValidada
+    });
+  }
+
 }
